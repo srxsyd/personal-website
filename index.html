@@ -20,62 +20,197 @@
 
     <section id="hero" class="section">
         <div class="hero-avatar">
-            <img src="https://via.placeholder.com/150" alt="Profile Picture">
+            <img src="assets/IMG_3761.JPG" alt="Profile Picture">
         </div>
         <div class="hero-text">
             <p class="greeting">Hello, I'm</p>
             <h1>Sarah Hong</h1>
             <p class="title">Software Engineer</p>
             <div class="btn-container">
-                <a href="#" class="btn btn-dark">Download CV</a>
+                <a href="#" class="btn btn-dark">Download Resume</a>
                 <a href="#contact" class="btn btn-light">Contact Info</a>
             </div>
         </div>
     </section>
 
-    <section id="experience" class="section">
-        <p class="section-subtitle">Explore My</p>
-        <h2 class="section-title"># experience</h2>
+    <section id="about" class="section">
+        <p class="section-subtitle">Get to know more</p>
+        <h2 class="section-title">About Me</h2>
         
-        <div class="experience-container">
-            <div class="exp-card">
-                <h3>Work Experience</h3>
-                <div class="exp-item">
-                    <span class="icon">✔️</span>
-                    <div>
-                        <h4>Company Name</h4>
-                        <p>Software Engineering Intern</p>
+        <div class="about-split-wrapper">
+            
+            <div class="about-vertical-image-container">
+                <img src="assets/IMG_9730.JPG" alt="Sarah Hong Profile" class="about-vertical-img">
+            </div>
+
+            <div class="about-content-right">
+                <div class="about-box-grid">
+                    <div class="about-box">
+                        <h3>Education</h3>
+                        <p><strong>University of California, Santa Barbara</strong><br>B.S. Computer Science, Expected June 2028</p>
+                    </div>
+                    <div class="about-box">
+                        <h3>Hobbies</h3>
+                        <p>Discovering new music, <a href="https://www.youtube.com/@officialsarahhong" target="_blank" class="hobby-link">playing violin</a>, DIY crafts & making travel plans!</p>
                     </div>
                 </div>
-                <div class="exp-item">
-                    <span class="icon">✔️</span>
-                    <div>
-                        <h4>Research Lab</h4>
-                        <p>Undergraduate Researcher</p>
-                    </div>
+                <div class="about-bio">
+                    <p>Hello, world! I'm Sarah, an aspiring software engineer interested in developing software for more efficient workflows. I especially love combining design and software development and hope to create creative technologies!</p>
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <section id="experience" class="section">
+        <p class="section-subtitle">Explore My</p>
+        <h2 class="section-title">Experiences</h2>
+        
+        <div class="experience-grid">
             <div class="exp-card">
-                <h3>Skills</h3>
-                <div class="exp-item">
-                    <span class="icon">✔️</span>
-                    <div>
-                        <h4>Languages</h4>
-                        <p>Python, JavaScript, C++, HTML/CSS</p>
+                <h3>Work Experience</h3>
+                <div class="exp-item">✔️ <div><h4>UCSB Life Sciences Computing Group</h4><p>Student Computer Technician</p></div></div>
+                <div class="exp-item">✔️ <div><h4>StemTree of South Irvine</h4><p>STEM Instructor</p></div></div>
+                <div class="exp-item">✔️ <div><h4>theCoderSchool Irvine</h4><p>Code Coach</p></div></div>
+            </div>
+
+            <div class="exp-card">
+                <h3>Extracurriculars</h3>
+                <div class="exp-item">✔️ <div><h4>UCSB ACM.Industry x Island View Outfitters</h4><p>Software Engineering Intern</p></div></div>
+                <div class="exp-item">✔️ <div><h4>SBHacks</h4><p>Director of Design</p></div></div>
+            </div>
+        </div>
+
+        <div class="experience-grid" style="margin-top: 2rem;">
+                <div class="exp-card">
+                    <h3>Relevant Coursework</h3>
+                    <div class="course-list">
+                        <div class="course-badge">
+                            <span class="course-name">Data Structures & Algorithms</span>
+                            <span class="course-code">CMPSC 130A</span>
+                        </div>
+                        <div class="course-badge">
+                            <span class="course-name">Advanced Applications Programming</span>
+                            <span class="course-code">CMPSC 156</span>
+                        </div>
+                        <div class="course-badge">
+                            <span class="course-name">Object Oriented Design & Implementation</span>
+                            <span class="course-code">CMPSC 16, 24, 32</span>
+                        </div>
+                        <div class="course-badge">
+                            <span class="course-name">Computer Organization</span>
+                            <span class="course-code">CMPSC 64</span>
+                        </div>
+                        <div class="course-badge">
+                            <span class="course-name">Discrete Math</span>
+                            <span class="course-code">CMPSC 40</span>
+                        </div>
                     </div>
                 </div>
-                <div class="exp-item">
-                    <span class="icon">✔️</span>
-                    <div>
+
+                <div class="exp-card">
+                    <h3>Skills</h3>
+                    <div class="skills-category">
+                        <h4>Languages</h4>
+                        <div class="bubble-container">
+                            <span>Python</span>
+                            <span>C++</span>
+                            <span>C</span>
+                            <span>Java</span>
+                            <span>JavaScript</span>
+                            <span>SQL</span>
+                            <span>MIPS Assembly</span>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
+                    <div class="skills-category" style="margin-top: 1.5rem;">
                         <h4>Technologies</h4>
-                        <p>Git, React, Node.js, Firebase</p>
+                        <div class="bubble-container">
+                            <span>Git</span>
+                            <span>Next.js</span>
+                            <span>React</span>
+                            <span>TypeScript</span>
+                            <span>TailwindCSS</span>
+                            <span>FastAPI</span>
+                            <span>Supabase</span>
+                            <span>SQLAlchemy</span>
+                            <span>Figma</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <script src="script.js"></script>
+    <section id="projects" class="section">
+        <p class="section-subtitle">Browse My Recent</p>
+        <h2 class="section-title">Projects</h2>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
+                <h3>Flow</h3>
+                <p class="project-tech">Javascript, Typescript, Node.js</p>
+                <p class="project-desc">A CLI tool to take a snapshot of your entire workspace, ready to reload at any time</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-light">GitHub</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
+                <h3>Project 2</h3>
+                <p class="project-tech">Description 2a</p>
+                <p class="project-desc">Description 2b</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-light">Link</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
+                <h3>Project 3</h3>
+                <p class="project-tech">Description 3a</p>
+                <p class="project-desc">Description 3b</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-light">Link</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
+                <h3>Project 4</h3>
+                <p class="project-tech">Description 4a</p>
+                <p class="project-desc">Description 4b</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-light">Link</a>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
+                <h3>Project 5</h3>
+                <p class="project-tech">Description 5a</p>
+                <p class="project-desc">Description 5b</p>
+                <div class="project-links">
+                    <a href="#" class="btn btn-light">Link</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <p class="section-subtitle">Get In Touch:</p>
+        <h2 class="section-title">Contact</h2>
+        <div class="contact-card">
+            <div class="contact-info"><a href="mailto:your-email@gmail.com">hongsarah012@gmail.com</a></div>
+            <div class="contact-info"><a href="#">LinkedIn</a></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Copyright © 2026 Sarah Hong. All Rights Reserved.</p>
+    </footer>
+
 </body>
 </html>
