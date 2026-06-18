@@ -164,10 +164,10 @@ body {
 
 .btn-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap; 
+    gap: 1rem;       
     margin-top: 1.5rem;
+    justify-content: flex-start; /* Aligns them nicely on desktop */
 }
 
 @media (min-width: 768px) {
@@ -187,12 +187,66 @@ body {
 }
 
 .btn {
-    padding: 0.8rem 1.8rem;
-    border-radius: 2rem;
-    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem; 
+    padding: 0.8rem 1.6rem;
+    border-radius: 0.6rem;
     font-weight: 600;
-    border: 2px solid #000;
-    transition: 0.2s ease;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    box-sizing: border-box;
+}
+
+.btn-primary {
+    background-color: #2b3a55; /* Solid Midnight Slate */
+    color: #f6f5f2 !important;  /* Cream text overrides */
+    border: 1px solid transparent;
+}
+
+.btn-primary:hover {
+    background-color: #c96f3b; /* Pops to terra cotta on hover */
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: rgba(255, 255, 255, 0.5); /* Semi-solid frosted white */
+    color: #2b3a55 !important;                  /* Midnight slate text */
+    border: 2px solid #2b3a55;                  /* Bold crisp border */
+}
+
+.btn-secondary:hover {
+    background-color: #2b3a55;
+    color: #f6f5f2 !important;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .btn-container {
+        justify-content: center; /* Centers the whole cluster on your iPhone */
+        width: 100%;
+    }
+    
+    .btn {
+        width: 100%; /* Forces them to match in width so they stack evenly on mobile */
+    }
+}
+
+.btn-github {
+    background-color: #2b3a55; /* Matches your bold midnight slate */
+    color: #f6f5f2;            /* Clean cream text */
+    border: 1px solid transparent;
+}
+
+.btn-github:hover {
+    background-color: #c96f3b; /* Subtle pop of your terra cotta color on hover */
+    transform: translateY(-2px);
+}
+
+.btn-github i {
+    font-size: 1.2rem; /* Makes the GitHub logo match the text scale perfectly */
 }
 
 .btn-dark {
