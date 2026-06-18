@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <div class="cd-background">
+        <div class="cd cd-1"></div>
+        <div class="cd cd-2"></div>
+    </div>
     <nav class="navbar">
         <div class="logo">Sarah Hong</div>
         <ul class="nav-links">
@@ -24,7 +27,7 @@
         </div>
         <div class="hero-text">
             <p class="greeting">Hello, I'm</p>
-            <h1>Sarah Hong</h1>
+            <h1>Sarah Hong!</h1>
             <p class="title">Software Engineer</p>
             <div class="btn-container">
                 <a href="#" class="btn btn-dark">Download Resume</a>
@@ -47,7 +50,7 @@
                 <div class="about-box-grid">
                     <div class="about-box">
                         <h3>Education</h3>
-                        <p><strong>University of California, Santa Barbara</strong><br>B.S. Computer Science, Expected June 2028</p>
+                        <p><strong>University of California, Santa Barbara</strong><br>B.S. Computer Science, <br>Expected June 2028</p>
                     </div>
                     <div class="about-box">
                         <h3>Hobbies</h3>
@@ -55,7 +58,8 @@
                     </div>
                 </div>
                 <div class="about-bio">
-                    <p>Hello, world! I'm Sarah, an aspiring software engineer interested in developing software for more efficient workflows. I especially love combining design and software development and hope to create creative technologies!</p>
+                    <p>Hello, world! I'm Sarah, an avid student, engineer, and designer interested in developing technology to build 
+                        a brighter future. I'm drawn to full-stack software development, fascinated by </p>
                 </div>
             </div>
 
@@ -66,7 +70,7 @@
         <p class="section-subtitle">Explore My</p>
         <h2 class="section-title">Experiences</h2>
         
-        <div class="experience-grid">
+        <div class="experience-master-grid">
             <div class="exp-card">
                 <h3>Work Experience</h3>
                 <div class="exp-item">✔️ <div><h4>UCSB Life Sciences Computing Group</h4><p>Student Computer Technician</p></div></div>
@@ -79,63 +83,30 @@
                 <div class="exp-item">✔️ <div><h4>UCSB ACM.Industry x Island View Outfitters</h4><p>Software Engineering Intern</p></div></div>
                 <div class="exp-item">✔️ <div><h4>SBHacks</h4><p>Director of Design</p></div></div>
             </div>
-        </div>
 
-        <div class="experience-grid" style="margin-top: 2rem;">
-                <div class="exp-card">
-                    <h3>Relevant Coursework</h3>
-                    <div class="course-list">
-                        <div class="course-badge">
-                            <span class="course-name">Data Structures & Algorithms</span>
-                            <span class="course-code">CMPSC 130A</span>
-                        </div>
-                        <div class="course-badge">
-                            <span class="course-name">Advanced Applications Programming</span>
-                            <span class="course-code">CMPSC 156</span>
-                        </div>
-                        <div class="course-badge">
-                            <span class="course-name">Object Oriented Design & Implementation</span>
-                            <span class="course-code">CMPSC 16, 24, 32</span>
-                        </div>
-                        <div class="course-badge">
-                            <span class="course-name">Computer Organization</span>
-                            <span class="course-code">CMPSC 64</span>
-                        </div>
-                        <div class="course-badge">
-                            <span class="course-name">Discrete Math</span>
-                            <span class="course-code">CMPSC 40</span>
-                        </div>
+            <div class="exp-card">
+                <h3>Relevant Coursework</h3>
+                <div class="course-list">
+                    <div class="course-badge"><span class="course-name">Data Structures & Algorithms</span> <span class="course-code">CMPSC 130A</span></div>
+                    <div class="course-badge"><span class="course-name">Advanced Applications Programming</span> <span class="course-code">CMPSC 156</span></div>
+                    <div class="course-badge"><span class="course-name">Object Oriented Design & Implementation</span> <span class="course-code">CMPSC 16, 24, 32</span></div>
+                    <div class="course-badge"><span class="course-name">Computer Organization</span> <span class="course-code">CMPSC 64</span></div>
+                    <div class="course-badge"><span class="course-name">Discrete Math</span> <span class="course-code">CMPSC 40</span></div>
+                </div>
+            </div>
+
+            <div class="exp-card">
+                <h3>Skills</h3>
+                <div class="skills-category">
+                    <h4>Languages</h4>
+                    <div class="bubble-container">
+                        <span>Python</span><span>C++</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>MIPS Assembly</span><span>HTML/CSS</span>
                     </div>
                 </div>
-
-                <div class="exp-card">
-                    <h3>Skills</h3>
-                    <div class="skills-category">
-                        <h4>Languages</h4>
-                        <div class="bubble-container">
-                            <span>Python</span>
-                            <span>C++</span>
-                            <span>C</span>
-                            <span>Java</span>
-                            <span>JavaScript</span>
-                            <span>SQL</span>
-                            <span>MIPS Assembly</span>
-                            <span>HTML/CSS</span>
-                        </div>
-                    </div>
-                    <div class="skills-category" style="margin-top: 1.5rem;">
-                        <h4>Technologies</h4>
-                        <div class="bubble-container">
-                            <span>Git</span>
-                            <span>Next.js</span>
-                            <span>React</span>
-                            <span>TypeScript</span>
-                            <span>TailwindCSS</span>
-                            <span>FastAPI</span>
-                            <span>Supabase</span>
-                            <span>SQLAlchemy</span>
-                            <span>Figma</span>
-                        </div>
+                <div class="skills-category" style="margin-top: 1.5rem;">
+                    <h4>Technologies</h4>
+                    <div class="bubble-container">
+                        <span>Git</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>TailwindCSS</span><span>FastAPI</span><span>Supabase</span><span>SQLAlchemy</span><span>Figma</span>
                     </div>
                 </div>
             </div>
@@ -151,7 +122,7 @@
                 <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
                 <h3>Flow</h3>
                 <p class="project-tech">Javascript, Typescript, Node.js</p>
-                <p class="project-desc">A CLI tool to take a snapshot of your entire workspace, ready to reload at any time</p>
+                <p class="project-desc">CLI tool snapshots your entire workspace, ready to reload at any time</p>
                 <div class="project-links">
                     <a href="#" class="btn btn-light">GitHub</a>
                 </div>
@@ -159,9 +130,9 @@
 
             <div class="project-card">
                 <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>Project 2</h3>
-                <p class="project-tech">Description 2a</p>
-                <p class="project-desc">Description 2b</p>
+                <h3>SBHacks XII Website</h3>
+                <p class="project-tech">Figma</p>
+                <p class="project-desc">Designed the SBHacks XII website in a 3 person team.</p>
                 <div class="project-links">
                     <a href="#" class="btn btn-light">Link</a>
                 </div>
@@ -211,6 +182,16 @@
     <footer>
         <p>Copyright © 2026 Sarah Hong. All Rights Reserved.</p>
     </footer>
-
+<script>
+    window.addEventListener('scroll', () => {
+        const scrollValue = window.scrollY;
+        
+        const cd1 = document.querySelector('.cd-1');
+        if(cd1) cd1.style.transform = `rotate(${scrollValue * 0.15}deg)`;
+        
+        const cd2 = document.querySelector('.cd-2');
+        if(cd2) cd2.style.transform = `rotate(${scrollValue * -0.1}deg)`;
+    });
+</script>
 </body>
 </html>
