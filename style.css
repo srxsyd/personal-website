@@ -114,9 +114,8 @@ body {
     align-items: center;
     text-align: center;
     
-    /* Spreads out the height so it doesn't feel short */
     min-height: 110vh; 
-    padding: 10rem 1.5rem 6rem 1.5rem; /* Generous top and bottom padding adds height */
+    padding: 10rem 1.5rem 6rem 1.5rem;
     box-sizing: border-box;
     gap: 3rem; 
 }
@@ -131,12 +130,12 @@ body {
 
 .hero-avatar {
     width: 240px;       
-    height: 280px;      /* Slightly taller than it is wide for a great portrait aspect ratio */
+    height: 280px;
     max-width: 70vw;    
-    border-radius: 1.5rem; /* Soft, modern rounded corners (change to 0 for sharp edges) */
+    border-radius: 1.5rem;
     overflow: hidden;
     box-shadow: 0 15px 35px rgba(0,0,0,0.07);
-    flex-shrink: 0;     /* Keeps iPhone Safari behaving perfectly */
+    flex-shrink: 0;
 }
 
 .hero-avatar img {
@@ -147,13 +146,22 @@ body {
 }
 
 .hero-text {
-    width: 100%;
-    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.greeting,
+.hero-text h1,
+.title {
+    margin: 0;
 }
 
 .hero-text h1 {
-    font-size: 2.5rem;  /* Slightly smaller for mobile displays so it doesn't wrap awkwardly */
-    margin: 0.5rem 0;
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #c96f3b;
 }
 
 .title {
@@ -167,7 +175,7 @@ body {
     flex-wrap: wrap; 
     gap: 1rem;       
     margin-top: 1.5rem;
-    justify-content: flex-start; /* Aligns them nicely on desktop */
+    justify-content: flex-start;
 }
 
 @media (min-width: 768px) {
@@ -176,12 +184,12 @@ body {
         text-align: left;
         gap: 5rem;
         padding: 120px 10%;
-        min-height: 100vh; /* Keeps it perfectly balanced on big screens */
+        min-height: 100vh;
     }
     
     .hero-avatar {
         width: 320px; 
-        height: 380px; /* Gorgeous desktop portrait size */
+        height: 380px;
         max-width: none;
     }
 }
@@ -201,20 +209,20 @@ body {
 }
 
 .btn-primary {
-    background-color: #2b3a55; /* Solid Midnight Slate */
-    color: #f6f5f2 !important;  /* Cream text overrides */
+    background-color: #2b3a55;
+    color: #f6f5f2 !important;
     border: 1px solid transparent;
 }
 
 .btn-primary:hover {
-    background-color: #c96f3b; /* Pops to terra cotta on hover */
+    background-color: #c96f3b;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    background-color: rgba(255, 255, 255, 0.5); /* Semi-solid frosted white */
-    color: #2b3a55 !important;                  /* Midnight slate text */
-    border: 2px solid #2b3a55;                  /* Bold crisp border */
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #2b3a55 !important;
+    border: 2px solid #2b3a55;
 }
 
 .btn-secondary:hover {
@@ -225,28 +233,28 @@ body {
 
 @media (max-width: 768px) {
     .btn-container {
-        justify-content: center; /* Centers the whole cluster on your iPhone */
+        justify-content: center;
         width: 100%;
     }
     
     .btn {
-        width: 100%; /* Forces them to match in width so they stack evenly on mobile */
+        width: 100%;
     }
 }
 
 .btn-github {
-    background-color: #2b3a55; /* Matches your bold midnight slate */
-    color: #f6f5f2;            /* Clean cream text */
+    background-color: #2b3a55;
+    color: #f6f5f2;
     border: 1px solid transparent;
 }
 
 .btn-github:hover {
-    background-color: #c96f3b; /* Subtle pop of your terra cotta color on hover */
+    background-color: #c96f3b;
     transform: translateY(-2px);
 }
 
 .btn-github i {
-    font-size: 1.2rem; /* Makes the GitHub logo match the text scale perfectly */
+    font-size: 1.2rem;
 }
 
 .btn-dark {
@@ -343,6 +351,7 @@ body {
     width: 100%;
     height: 550px;
     object-fit: cover;
+    border-radius: 1.5rem;
 }
 
 .about-content-right {
@@ -438,19 +447,6 @@ body {
 .course-code {
     font-weight: 700;
     color: #c96f3b;
-}
-
-.course-badge:hover {
-    background-color: #000000;
-    border-color: #000000;
-}
-
-.course-badge:hover .course-name {
-    color: #ffffff;
-}
-
-.course-badge:hover .course-code {
-    color: #cccccc;
 }
 
 @media (max-width: 500px) {
@@ -649,7 +645,6 @@ footer {
     font-size: 2.5rem;
     font-weight: 800;
     color: #c96f3b;
-    letter-spacing: -0.03em;
     margin-top: 0.5rem;
     margin-bottom: 2rem;
 }
@@ -657,22 +652,8 @@ footer {
 .section-subtitle {
     font-size: 0.9rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.15em;
     color: #2b3a55;
     margin: 0;
-}
-
-.hero-text .greeting {
-    color: #2b3a55;
-    font-weight: 600;
-}
-
-.hero-text h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    color: #c96f3b;
-    margin: 0.5rem 0;
 }
 
 .exp-card h3,
