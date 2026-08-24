@@ -564,6 +564,7 @@ h1, h2, h3, .logo, .section-title {
 .project-tech {
     color: var(--text-secondary);
     font-size: 0.9rem;
+    font-style: italic;
     margin: 0.5rem 0;
 }
 
