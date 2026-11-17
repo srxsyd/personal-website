@@ -1,191 +1,288 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Sarah Hong</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
+    <script>
+        /* Show the intro loader once per browser session (and never with reduced motion). */
+        (function () {
+            var skip = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            try { if (sessionStorage.getItem('introSeen')) skip = true; } catch (e) {}
+            if (!skip) document.documentElement.classList.add('show-loader');
+        })();
+    </script>
 </head>
 <body>
-    <nav class="navbar">
-        <a href="#hero" class="logo">Sarah Hong</a>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <section id="hero" class="section">
-        <div class="hero-avatar">
-            <img src="assets/IMG_3761.JPG" alt="Profile Picture">
+    <!-- Intro loader -->
+    <div class="loader" aria-hidden="true">
+        <p class="loader-hi">Hi</p>
+        <div class="loader-name">
+            <p class="loader-typed"></p>
+            <p class="loader-role">CS @ UCSB &nbsp;|&nbsp; Aspiring Software Engineer</p>
         </div>
-        <div class="hero-text">
-            <p class="greeting">Hello, I'm</p>
-            <h1>Sarah Hong!</h1>
-            <p class="title">Student & Aspiring Software Engineer</p>
-            <div class="btn-container">
-                <a href="your-resume.pdf" class="btn btn-primary" download>Download Resume</a>
-                <a href="#contact" class="btn btn-secondary">Contact Info</a>
-                <a href="https://github.com/srxsyd" target="_blank" rel="noopener noreferrer" class="btn btn-github">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-            </div>
+    </div>
+
+    <!-- Faint column guides from the template -->
+    <div class="grid-lines" aria-hidden="true"></div>
+
+    <header class="navbar">
+        <a href="#hero" class="logo">S.</a>
+        <nav class="nav-center" aria-label="Primary">
+            <a href="#about">About</a>
+            <a href="your-resume.pdf" class="nav-accent" download>Download Resume</a>
+            <a href="#experience">Experience</a>
+        </nav>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-overlay">
+            Menu <span class="menu-icon" aria-hidden="true"><i></i><i></i><i></i></span>
+        </button>
+    </header>
+
+    <!-- Full-screen menu -->
+    <div class="menu-overlay" id="menu-overlay" hidden>
+        <button class="menu-close" type="button">Close <span aria-hidden="true">&times;</span></button>
+        <nav class="menu-links" aria-label="Menu">
+            <a href="#projects">Projects</a>
+            <a href="#about">About me</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="menu-contact">
+            <h3>Contact info</h3>
+            <a href="mailto:hongsarah012@gmail.com">Email</a>
+            <a href="https://github.com/srxsyd" target="_blank" rel="noopener noreferrer">GitHub</a>
+            <a href="https://www.youtube.com/@officialsarahhong" target="_blank" rel="noopener noreferrer">YouTube</a>
         </div>
-    </section>
+    </div>
 
-    <section id="about" class="section">
-        <p class="section-subtitle">Get to know more</p>
-        <h2 class="section-title">About Me</h2>
-        
-        <div class="about-split-wrapper">
-            
-            <div class="about-vertical-image-container">
-                <img src="assets/IMG_9730.JPG" alt="Sarah Hong Profile" class="about-vertical-img">
+    <main>
+        <section id="hero">
+            <div class="hero-glow hero-glow-1" aria-hidden="true"></div>
+            <div class="hero-glow hero-glow-2" aria-hidden="true"></div>
+
+            <div class="hero-inner">
+                <div class="hero-left">
+                    <p class="eyebrow">Nice to meet you, my name is...</p>
+                    <h1>Sarah<br>Hong</h1>
+                </div>
+                <div class="hero-right">
+                    <span class="dash" aria-hidden="true"></span>
+                    <p>Undergrad CS @ UCSB, drawn to full-stack development and the intersection of entertainment, creativity, and tech.</p>
+                    <a href="#contact" class="text-link">Contact info</a>
+                </div>
             </div>
 
-            <div class="about-content-right">
-                <div class="about-box-grid">
-                    <div class="about-box">
-                        <h3>Education</h3>
-                        <p><strong>University of California, Santa Barbara</strong><br>B.S. Computer Science, <br>Expected June 2029</p>
+            <div class="follow">
+                <span class="follow-label">Follow</span>
+                <a href="https://github.com/srxsyd" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="https://www.youtube.com/@officialsarahhong" target="_blank" rel="noopener noreferrer">YouTube</a>
+                <a href="mailto:hongsarah012@gmail.com">Email</a>
+            </div>
+
+            <svg class="badge" viewBox="0 0 100 100" aria-hidden="true">
+                <defs><path id="badge-circle" d="M50,50 m-36,0 a36,36 0 1,1 72,0 a36,36 0 1,1 -72,0"/></defs>
+                <text><textPath href="#badge-circle">SARAH HONG · CS @ UCSB · BUILDER ·</textPath></text>
+            </svg>
+        </section>
+
+        <section id="projects">
+            <div class="tabs" role="tablist" aria-label="Filter projects">
+                <button role="tab" aria-selected="true" data-filter="all">All Projects</button>
+                <button role="tab" aria-selected="false" data-filter="software">Software</button>
+                <button role="tab" aria-selected="false" data-filter="design">Design</button>
+                <button role="tab" aria-selected="false" data-filter="research">Research</button>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card" data-type="software">
+                    <img src="assets/flow.png" alt="Flow project preview" class="project-img">
+                    <div class="project-meta">
+                        <div>
+                            <h3>Flow</h3>
+                            <p class="project-tech">JavaScript, TypeScript, Node.js</p>
+                        </div>
+                        <span class="chip">Software</span>
                     </div>
-                    <div class="about-box">
-                        <h3>Hobbies</h3>
-                        <p>Discovering new music, <a href="https://www.youtube.com/@officialsarahhong" target="_blank" class="hobby-link">playing violin</a>, DIY crafts & making travel plans!</p>
+                    <p class="project-desc">CLI tool snapshots your entire workspace, ready to reload at any time</p>
+                    <div class="project-links">
+                        <a href="https://devpost.com/software/flow-q9c6gm" target="_blank" rel="noopener noreferrer">Devpost</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-type="design">
+                    <img src="assets/website.png" alt="SBHacks XII website preview" class="project-img">
+                    <div class="project-meta">
+                        <div>
+                            <h3>SBHacks XII Website</h3>
+                            <p class="project-tech">Figma</p>
+                        </div>
+                        <span class="chip">Design</span>
+                    </div>
+                    <p class="project-desc">Designed the SBHacks XII website in a 3 person team.</p>
+                    <div class="project-links">
+                        <a href="https://2026.sbhacks.com/" target="_blank" rel="noopener noreferrer">Website</a>
+                        <a href="sbhacks-more-info.html">More Info</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-type="software">
+                    <img src="assets/daytrip-planner.png" alt="Daytrip Planner app showing a map of Laguna Beach and an itinerary panel" class="project-img">
+                    <div class="project-meta">
+                        <div>
+                            <h3>Daytrip Planner</h3>
+                            <p class="project-tech">React, JavaScript, CSS, Node.js, Express, SQLite, REST API, Render</p>
+                        </div>
+                        <span class="chip">Software</span>
+                    </div>
+                    <p class="project-desc">Developed a full-stack trip-planning web app on Laguna Beach</p>
+                    <div class="project-links">
+                        <a href="https://github.com/srxsyd/maplibre-app" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://daytrip-planner.vercel.app/" target="_blank" rel="noopener noreferrer">Website</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-type="software research">
+                    <img src="assets/placeholder.jpeg" alt="Violin Pose Estimation Guide project preview" class="project-img">
+                    <div class="project-meta">
+                        <div>
+                            <h3>Violin Pose Estimation Guide</h3>
+                            <p class="project-tech">Python, OpenCV, MediaPipe, scikit-learn</p>
+                        </div>
+                        <span class="chip">Research</span>
+                    </div>
+                    <p class="project-desc">Real-time computer vision app that classifies a violinist's webcam posture into 6 positions, trained on a 1,144-image dataset I built.</p>
+                    <div class="project-links">
+                        <a href="https://docs.google.com/presentation/d/1vPZXGx7dde2UUJakoTSw5dJ9QsEMlmnDeXe8y4jR-JU/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Slides</a>
+                    </div>
+                </article>
+
+                <article class="project-card" data-type="software">
+                    <img src="assets/placeholder.jpeg" alt="Project 5 preview" class="project-img">
+                    <div class="project-meta">
+                        <div>
+                            <h3>Project 5</h3>
+                            <p class="project-tech">Description 5a</p>
+                        </div>
+                        <span class="chip">Software</span>
+                    </div>
+                    <p class="project-desc">Description 5b</p>
+                    <div class="project-links">
+                        <a href="#">Link</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <p class="eyebrow">Get to know more</p>
+            <h2 class="section-title">About me</h2>
+
+            <div class="about-split-wrapper">
+                <div class="about-vertical-image-container">
+                    <img src="assets/IMG_9730.JPG" alt="Sarah Hong" class="about-vertical-img">
+                </div>
+
+                <div class="about-content-right">
+                    <div class="about-bio">
+                        <p>Hello, world! I'm Sarah, undergrad CS @ UCSB interested in developing technology to build
+                            a brighter future. I'm drawn to full-stack software development, fascinated by new technological advancements.
+                            I'm eager to learn more about topics like machine learning, human-computer interaction, and emerging technologies, and
+                            am seeking opportunities to grow as an aspiring software engineer.</p>
+                        <p>I'm particularly interested in the intersection of entertainment, creativity, and tech. This is reflected on this
+                            website, especially in my hobbies &amp; projects section. I hope you have a fun time checking it out!</p>
+                    </div>
+                    <div class="about-box-grid">
+                        <div class="about-box">
+                            <h3>Education</h3>
+                            <p><strong>University of California, Santa Barbara</strong><br>B.S. Computer Science</p>
+                        </div>
+                        <div class="about-box">
+                            <h3>Hobbies</h3>
+                            <p>Discovering new music, <a href="https://www.youtube.com/@officialsarahhong" target="_blank" rel="noopener noreferrer" class="hobby-link">playing violin</a>, DIY crafts &amp; making travel plans!</p>
+                        </div>
                     </div>
                 </div>
-                <div class="about-bio">
-                    <p>Hello, world! I'm Sarah, undergrad CS @ UCSB interested in developing technology to build 
-                        a brighter future. I'm drawn to full-stack software development, fascinated by new technological advancements.
-                        I'm eager to learn more about topics like machine learning, human-computer interaction, and emerging technologies, and 
-                        am seeking opportunities to grow as an aspiring software engineer.
-                    
-                        I'm particularly interested in the intersection of entertainment, creativity, and tech. This is reflected on this
-                        website, especially in my hobbies & projects section. I hope you have a fun time checking it out! </p>
+            </div>
+        </section>
+
+        <section id="experience" class="section">
+            <p class="eyebrow">Explore my</p>
+            <h2 class="section-title">Experiences</h2>
+
+            <div class="experience-master-grid">
+                <div class="exp-card">
+                    <h3>Work Experience</h3>
+                    <div class="exp-item exp-current"><div><h4>BioPACIFIC MIP, Computation &amp; Data</h4><p>Undergraduate Assistant, Scientific Programmer and Designer</p></div><p class="exp-date">Oct 2026 – Present</p></div>
+                    <div class="exp-item exp-current"><div><h4>UCSB Early Research Scholars Program (ERSP)</h4><p>Undergraduate Researcher</p></div><p class="exp-date">Sep 2026 – Present</p></div>
+                    <div class="exp-item"><div><h4>UCSB Life Sciences Computing Group</h4><p>Student Computer Technician</p></div><p class="exp-date">Sep 2025 – Oct 2026</p></div>
+                    <div class="exp-item"><div><h4>StemTree of South Irvine</h4><p>STEM Instructor</p></div><p class="exp-date">Jun 2026 – Sep 2026</p></div>
+                    <div class="exp-item"><div><h4>theCoderSchool Irvine</h4><p>Code Coach</p></div><p class="exp-date">Feb 2025 – Sep 2025</p></div>
                 </div>
-            </div>
 
-        </div>
-    </section>
+                <div class="exp-card">
+                    <h3>Extracurriculars</h3>
+                    <div class="exp-item"><div><h4>UCSB ACM.Industry x Island View Outfitters</h4><p>Software Developer</p></div><p class="exp-date">Jan 2026 – Jun 2026</p></div>
+                    <div class="exp-item exp-current"><div><h4>SBHacks</h4><p>Director of Design</p></div><p class="exp-date">Oct 2025 – Present</p></div>
 
-    <section id="experience" class="section">
-        <p class="section-subtitle">Explore My</p>
-        <h2 class="section-title">Experiences</h2>
-        
-        <div class="experience-master-grid">
-            <div class="exp-card">
-                <h3>Work Experience</h3>
-                <div class="exp-item">- <div><h4>UCSB Life Sciences Computing Group</h4><p>Student Computer Technician</p></div></div>
-                <div class="exp-item">- <div><h4>StemTree of South Irvine</h4><p>STEM Instructor</p></div></div>
-                <div class="exp-item">- <div><h4>theCoderSchool Irvine</h4><p>Code Coach</p></div></div>
-            </div>
-
-            <div class="exp-card">
-                <h3>Extracurriculars</h3>
-                <div class="exp-item">- <div><h4>UCSB ACM.Industry x Island View Outfitters</h4><p>Software Developer</p></div></div>
-                <div class="exp-item">- <div><h4>SBHacks</h4><p>Director of Design</p></div></div>
-            </div>
-
-            <div class="exp-card">
-                <h3>Relevant Coursework</h3>
-                <div class="course-list">
-                    <div class="course-badge"><span class="course-name">Data Structures & Algorithms</span> <span class="course-code">CMPSC 130A</span></div>
-                    <div class="course-badge"><span class="course-name">Advanced Applications Programming</span> <span class="course-code">CMPSC 156</span></div>
-                    <div class="course-badge"><span class="course-name">Object Oriented Design & Implementation</span> <span class="course-code">CMPSC 16, 24, 32</span></div>
-                    <div class="course-badge"><span class="course-name">Computer Organization</span> <span class="course-code">CMPSC 64</span></div>
-                    <div class="course-badge"><span class="course-name">Discrete Math</span> <span class="course-code">CMPSC 40</span></div>
-                </div>
-            </div>
-
-            <div class="exp-card">
-                <h3>Skills</h3>
-                <div class="skills-category">
-                    <h4>Languages</h4>
-                    <div class="bubble-container">
-                        <span>Python</span><span>C++</span><span>C</span><span>Java</span><span>JavaScript</span><span>SQL</span><span>MIPS Assembly</span><span>HTML/CSS</span>
+                    <h3 class="exp-subhead">Relevant Coursework</h3>
+                    <div class="course-list">
+                        <div class="course-badge"><span class="course-name">Data Structures &amp; Algorithms</span> <span class="course-code">CMPSC 130A</span></div>
+                        <div class="course-badge"><span class="course-name">Advanced Applications Programming</span> <span class="course-code">CMPSC 156</span></div>
+                        <div class="course-badge"><span class="course-name">Object Oriented Design &amp; Implementation</span> <span class="course-code">CMPSC 16, 24, 32</span></div>
+                        <div class="course-badge"><span class="course-name">Computer Organization</span> <span class="course-code">CMPSC 64</span></div>
+                        <div class="course-badge"><span class="course-name">Discrete Math</span> <span class="course-code">CMPSC 40</span></div>
                     </div>
                 </div>
-                <div class="skills-category" style="margin-top: 1.5rem;">
-                    <h4>Technologies</h4>
-                    <div class="bubble-container">
-                        <span>Git</span><span>Next.js</span><span>React</span><span>TypeScript</span><span>TailwindCSS</span><span>FastAPI</span><span>Supabase</span><span>SQLAlchemy</span><span>Figma</span>
+
+                <div class="exp-card exp-card-wide">
+                    <h3>Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skills-category">
+                            <h4>Languages</h4>
+                            <div class="bubble-container">
+                                <span>Java</span><span>Python</span><span>C++</span><span>C</span><span>JavaScript</span><span>TypeScript</span><span>HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Frameworks &amp; Libraries</h4>
+                            <div class="bubble-container">
+                                <span>React</span><span>Next.js</span><span>Node.js</span><span>Express.js</span><span>FastAPI</span><span>Svelte/SvelteKit</span><span>Tailwind CSS</span><span>scikit-learn</span>
+                            </div>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Databases &amp; Cloud</h4>
+                            <div class="bubble-container">
+                                <span>PostgreSQL</span><span>SQLite</span><span>Supabase</span><span>MinIO</span><span>Vercel</span><span>Render</span>
+                            </div>
+                        </div>
+                        <div class="skills-category">
+                            <h4>Tools</h4>
+                            <div class="bubble-container">
+                                <span>Git</span><span>GitHub</span><span>Docker</span><span>Docker Compose</span><span>Linux</span><span>OpenCV</span><span>MediaPipe</span><span>Gemini API</span><span>REST APIs</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="section">
-        <p class="section-subtitle">Browse My Recent</p>
-        <h2 class="section-title">Projects</h2>
-        
-        <div class="projects-grid">
-            <div class="project-card">
-                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>Flow</h3>
-                <p class="project-tech">Javascript, Typescript, Node.js</p>
-                <p class="project-desc">CLI tool snapshots your entire workspace, ready to reload at any time</p>
-                <div class="project-links">
-                    <a href="https://devpost.com/software/flow-q9c6gm" target="_blank" rel="noopener noreferrer" class="btn btn-light">Devpost</a>
-                </div>
+        <section id="contact" class="section">
+            <p class="eyebrow">Get in touch</p>
+            <a class="contact-email" href="mailto:hongsarah012@gmail.com">hongsarah012@gmail.com</a>
+            <div class="contact-links">
+                <a href="https://github.com/srxsyd" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="your-resume.pdf" download><i class="fa-solid fa-file-arrow-down"></i> Resume</a>
             </div>
+        </section>
+    </main>
 
-            <div class="project-card">
-                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>SBHacks XII Website</h3>
-                <p class="project-tech">Figma</p>
-                <p class="project-desc">Designed the SBHacks XII website in a 3 person team.</p>
-                <div class="project-links">
-                    <a href="https://sbhacks.com/" target="_blank" rel="noopener noreferrer" class="btn btn-light">Website</a>
-                    <a href="sbhacks-more-info.html" class="btn btn-light">More Info</a>
-                </div>
-            </div>
+    <footer>Designed &amp; built by Sarah Hong</footer>
 
-            <div class="project-card">
-                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>Daytrip Planner</h3>
-                <p class="project-tech">React, JavaScript, CSS, Node.js, Express, SQLite, REST API, Render</p>
-                <p class="project-desc">Developed a full-stack trip-planning web app on Laguna Beach</p>
-                <div class="project-links">
-                    <a href="https://github.com/srxsyd/maplibre-app" target="_blank" rel="noopener noreferrer" class="btn btn-light">GitHub</a>
-                    <a href="https://daytrip-planner.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-light">Website</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>Project 4</h3>
-                <p class="project-tech">Description 4a</p>
-                <p class="project-desc">Description 4b</p>
-                <div class="project-links">
-                    <a href="#" class="btn btn-light">Link</a>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <img src="assets/placeholder.jpeg" alt="Project Image" class="project-img">
-                <h3>Project 5</h3>
-                <p class="project-tech">Description 5a</p>
-                <p class="project-desc">Description 5b</p>
-                <div class="project-links">
-                    <a href="#" class="btn btn-light">Link</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section">
-        <p class="section-subtitle">Get In Touch:</p>
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-card">
-            <div class="contact-info"><a href="mailto:hongsarah012@gmail.com">hongsarah012@gmail.com</a></div>
-        </div>
-    </section>
+    <script src="script.js"></script>
 </body>
 </html>
